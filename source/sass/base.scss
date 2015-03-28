@@ -11,6 +11,7 @@ a {
   text-decoration: none;
 }
 body {
+  -webkit-font-smoothing: antialiased;
   font: normal #{$font-size}/#{$line-height} $font-family;
   min-width: $container-width + 30px;
 }
@@ -23,18 +24,26 @@ body {
     margin: 0 auto;
   }
 }
+.heading {
+  font-size: 30px;
+  font-weight: bold;
+  text-transform: uppercase;
+  color: #424a51;
+  text-align: center;
+  margin-top: 85px;
+}
 .line:after {
   content: "";
   display: block;
   width: 60px;
   border-top: 2px solid #c59a6d;
-  margin: 53px auto 50px auto;
+  margin: 46px auto 39px auto;
 }
 .scroll-down {
   width: 40px;
   height: 40px;
   border: solid 1px #c59a6d;
-  margin: 42px auto 0 auto;
+  margin: 36px auto 0 auto;
   position: relative;
   cursor: pointer;
 
@@ -45,13 +54,26 @@ body {
     display: block;
     width: 18px;
     height: 11px;
-    @include sprite(154px, 0);
     position: absolute;
     left: 11px;
     top: 14.5px;
+
+    @include sprite(154px, 0);
   }
 
   &:hover {
     background: #c59a6d;
   }
+
+  &.dark:after {
+    @include sprite(154px, 22px)
+  }
+
+  &.dark:hover:after {
+    @include sprite(154px, 0)
+  }
+}
+.landing-description {
+  color: #424a51;
+  text-align: center;
 }
