@@ -1,0 +1,19 @@
+{
+  "name": "landing_page",
+  "version": "0.0.1",
+  "description": "Alan Podemski's landing page",
+  "author": "Tsyrulnikov Gleb <gleb@redy.io>",
+  "license": "ISC",
+  "devDependencies": {
+    "gulp": "latest",
+    "gulp-concat": "latest",
+    "gulp-plumber": "latest",
+    "gulp-coffee": "latest",
+    "gulp-include": "latest",
+    "gulp-uglify": "latest",
+    "gulp-sass": "latest",
+    "gulp-watch": "latest",
+    "gulp-minify-html": "latest",
+    "browser-sync": "latest"
+  }
+}
