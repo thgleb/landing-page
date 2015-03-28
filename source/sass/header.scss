@@ -1,0 +1,102 @@
+#header {
+  height: 803px;
+  background: center center / cover url(../images/header-bg.jpg);
+
+  .inner-container {
+    text-align: center;
+  }
+}
+#header-slogan {
+  color: #fff;
+  font-size: 16px;
+  text-transform: uppercase;
+  padding-top: 187px;
+
+  &:after {
+    margin-top: 26px;
+    margin-bottom: 34px;
+  }
+}
+#header-our-work {
+  width: 697px;
+  height: 123px;
+  font-size: 2.72 * $font-size;
+  font-weight: bold;
+  line-height: 123px;
+  border: 2px solid #fff;
+  border-radius: 2px;
+  color: #fff;
+}
+#header-nav-switcher {
+  $width: 30px;
+  $height: 4px;
+  $margin: 6px;
+  $color: #fff;
+  $hover-color: #e7e7e7;
+
+  @mixin switcher() {
+    width: $width;
+    border-top: solid $height $color;
+    margin-bottom: $margin;
+  }
+
+  position: absolute;
+  left: -85px;
+  top: 16px;
+
+  @include switcher();
+
+  &:after,
+  &:before {
+    content: "";
+    display: block;
+
+    @include switcher();
+  }
+
+  &:before {
+    margin-top: $margin;
+  }
+
+  &:hover,
+  &:hover:before,
+  &:hover:after,
+  &[data-state="on"],
+  &[data-state="on"]:before,
+  &[data-state="on"]:after {
+    border-top-color: $hover-color;
+    cursor: pointer;
+  }
+}
+#header-nav {
+  position: relative;
+  left: 45px;
+  top: 58px;
+
+  nav {
+    display: none;
+  }
+
+  nav[data-state="on"] {
+    display: block;
+  }
+
+  li {
+    list-style: none;
+    display: inline-block;
+    width: 216px;
+    text-align: center;
+  }
+
+  a {
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: 0.63 * $font-size;
+    color: #fff;
+    text-transform: uppercase;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+}

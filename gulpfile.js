@@ -4,10 +4,11 @@ var coffee = require("gulp-coffee");
 var concat = require("gulp-concat");
 var include = require("gulp-include");
 var uglify = require("gulp-uglify");
-var sass = require("gulp-sass");
+var sass = require("gulp-ruby-sass");
 var watch = require("gulp-watch");
 var html = require("gulp-minify-html");
 var browserSync = require("browser-sync");
+var image = require("gulp-imagemin");
 
 function run(task) {
   return function() {
@@ -37,14 +38,14 @@ gulp.task("scripts", function() {
 });
 
 gulp.task("styles", function() {
-  gulp.src("./source/sass/build.scss")
-      .pipe(plumber())
-      .pipe(sass({
-        includePaths: ["source/sass"],
-        outputStyle: "compressed"
-      }))
-      .pipe(concat("build.css"))
-      .pipe(gulp.dest("./dist/assets/styles"));
+  sass("./source/sass/build.scss", {
+    style: "compressed"
+  })
+    .on("error", function(error) {
+      console.log("Styles Error: ", error.message)
+    })
+    .pipe(concat("build.css"))
+    .pipe(gulp.dest("./dist/assets/styles"));
 });
 
 gulp.task("html", function() {
@@ -57,6 +58,7 @@ gulp.task("html", function() {
 gulp.task("images", function() {
   gulp.src("./source/images/**/*.*")
       .pipe(plumber())
+      .pipe(image())
       .pipe(gulp.dest("./dist/assets/images"));
 });
 
@@ -72,7 +74,7 @@ gulp.task("watch", function() {
   };
 
   watch("source/cs/**/*.*", options, run("scripts"));
-  watch("source/scss/**/*.*", options, run("styles"));
+  watch("source/sass/**/*.*", options, run("styles"));
   watch("source/html/**/*.*", options, run("html"));
   watch("source/images/**/*.*", options, run("images"));
   watch("source/fonts/**/*.*", options, run("fonts"));

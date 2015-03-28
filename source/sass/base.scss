@@ -1,0 +1,57 @@
+$font-size: 22px;
+$line-height: 36px;
+$font-family: "Proxima Nova", Helvetica, Arial, sans-serif;
+$container-width: 1171px;
+
+* {
+  margin: 0;
+  padding: 0;
+}
+a {
+  text-decoration: none;
+}
+body {
+  font: normal #{$font-size}/#{$line-height} $font-family;
+  min-width: $container-width + 30px;
+}
+.container {
+  width: $container-width;
+  margin: 0 auto;
+
+  .inner-container {
+    width: 720px;
+    margin: 0 auto;
+  }
+}
+.line:after {
+  content: "";
+  display: block;
+  width: 60px;
+  border-top: 2px solid #c59a6d;
+  margin: 53px auto 50px auto;
+}
+.scroll-down {
+  width: 40px;
+  height: 40px;
+  border: solid 1px #c59a6d;
+  margin: 42px auto 0 auto;
+  position: relative;
+  cursor: pointer;
+
+  @include transition(background, .2s, ease-in-out);
+
+  &:after {
+    content: "";
+    display: block;
+    width: 18px;
+    height: 11px;
+    @include sprite(154px, 0);
+    position: absolute;
+    left: 11px;
+    top: 14.5px;
+  }
+
+  &:hover {
+    background: #c59a6d;
+  }
+}

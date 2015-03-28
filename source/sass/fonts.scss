@@ -1,0 +1,17 @@
+@mixin font-face($font-name, $font-weight, $font-file) {
+  $filepath: "/assets/fonts/" + $font-file;
+
+  @font-face {
+    font-family: "#{$font-name}";
+    font-weight: $font-weight;
+
+    src: url($filepath + ".eot");
+    src: url($filepath + ".eot?#iefix") format("embedded-opentype"),
+         url($filepath + ".woff") format("woff"),
+         url($filepath + ".tff") format("truetype"),
+         url($filepath + ".svg#" + $font-name) format("svg");
+  }
+}
+
+@include font-face("Proxima Nova", normal, "proxima-nova-reg");
+@include font-face("Proxima Nova", bold, "proxima-nova-bold");

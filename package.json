@@ -11,9 +11,10 @@
     "gulp-coffee": "latest",
     "gulp-include": "latest",
     "gulp-uglify": "latest",
-    "gulp-sass": "latest",
+    "gulp-ruby-sass": "latest",
     "gulp-watch": "latest",
     "gulp-minify-html": "latest",
-    "browser-sync": "latest"
+    "browser-sync": "latest",
+    "gulp-imagemin": "latest"
   }
 }
