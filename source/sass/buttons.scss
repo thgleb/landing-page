@@ -18,6 +18,10 @@
 
   @include transition(background, .2s, ease-in-out);
 
+  &:hover {
+    background: $border-color;
+  }
+
   &.link a {
     display: block;
     color: $text-color;
@@ -27,7 +31,16 @@
     margin: 0 auto;
   }
 
-  &:hover {
+  &.filled {
     background: $border-color;
+
+    &:hover {
+      background: transparent;
+    }
+
+    &.link:hover a,
+    &:hover {
+      color: $border-color;
+    }
   }
 }

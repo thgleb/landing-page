@@ -18,11 +18,10 @@ body {
 .container {
   width: $container-width;
   margin: 0 auto;
-
-  .inner-container {
-    width: 720px;
-    margin: 0 auto;
-  }
+}
+.inner-container {
+  width: 720px;
+  margin: 0 auto;
 }
 .heading {
   font-size: 30px;
@@ -32,12 +31,18 @@ body {
   text-align: center;
   margin-top: 85px;
 }
-.line:after {
-  content: "";
-  display: block;
-  width: 60px;
-  border-top: 2px solid #c59a6d;
-  margin: 46px auto 39px auto;
+.line {
+  &:after {
+    content: "";
+    display: block;
+    width: 60px;
+    border-top: 2px solid #c59a6d;
+    margin: 46px auto 39px auto;
+  }
+
+  &.small:after {
+    width: 32px;
+  }
 }
 .scroll-down {
   width: 40px;
