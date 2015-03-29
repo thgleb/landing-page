@@ -1,5 +1,5 @@
 @mixin sprite($x, $y) {
-  background: url(../images/sprite.png) -#{$x} -#{$y};
+  background: no-repeat url(../images/sprite.png) -#{$x} -#{$y};
 }
 
 @mixin transition($transition-property, $transition-time, $method) {

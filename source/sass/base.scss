@@ -77,3 +77,8 @@ body {
   color: #424a51;
   text-align: center;
 }
+.clearfix:after {
+  content: "";
+  display: block;
+  clear: both;
+}

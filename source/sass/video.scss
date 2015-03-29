@@ -1,0 +1,32 @@
+.video {
+  width: 100%;
+  height: 500px;
+  background-size: cover;
+  position: relative;
+
+  .play {
+    $width: 42px;
+    $height: 49px;
+
+    width: 0;
+    height: 0;
+    cursor: pointer;
+
+    border-top: $height/2 solid transparent;
+    border-bottom: $height/2 solid transparent;
+    border-left: $width solid #fff;
+
+    position: absolute;
+    left: 50%;
+    top: 50%;
+
+    margin-left: -$width / 2;
+    margin-top: -$height / 2;
+
+    @include transition(border-left-color, .2s, ease-in-out);
+
+    &:hover {
+      border-left-color: #e7e7e7;
+    }
+  }
+}
