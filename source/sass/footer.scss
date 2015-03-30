@@ -1,0 +1,165 @@
+#footer {
+  background: #282f35;
+  box-shadow: inset 0 -3px #c59a6d;
+
+  .heading {
+    display: inline-block;
+    padding-top: 64px;
+    width: 100%;
+    color: #fff;
+  }
+}
+
+$footer-address-width: 370px;
+
+#footer-contacts {
+  margin-top: 92px;
+}
+
+#footer-address {
+  width: $footer-address-width;
+  float: left;
+
+  h3 {
+    color: #fff;
+    text-transform: uppercase;
+    font-size: 18px;
+
+    &:before {
+      content: "";
+      display: inline-block;
+      vertical-align: middle;
+      margin-right: 18px;
+
+      width: 16px;
+      height: 24px;
+
+      @include sprite(154px, 33px);
+    }
+  }
+
+  address {
+    font-style: italic;
+    font-size: 18px;
+    line-height: 18px;
+    margin: 34px 0 0 34px;
+    color: #fff;
+
+    a {
+      color: #fff;
+    }
+  }
+
+  nav {
+    margin-top: 29px;
+  }
+
+  li {
+    list-style: none;
+    font-size: 0;
+    display: inline-block;
+    margin-right: 11px;
+
+    &:first-child {
+      margin-left: 15px;
+    }
+
+    a {
+      width: 50px;
+      height: 50px;
+
+      opacity: .8;
+      display: block;
+      position: relative;
+
+      @include transition(opacity, .2s);
+
+      &:after {
+        content: "";
+        display: block;
+        position: absolute;
+        top: 0; left: 0;
+        right: 0; bottom: 0;
+        margin: auto;
+      }
+
+      &:hover {
+        opacity: 1;
+      }
+    }
+  }
+
+  .fb:after {
+    width: 10px;
+    height: 22px;
+
+    @include sprite(172px, 0);
+  }
+
+  .tw:after {
+    width: 21px;
+    height: 19px;
+
+    @include sprite(182px, 0);
+  }
+
+  .vi:after {
+    width: 20px;
+    height: 19px;
+
+    @include sprite(203px, 0);
+  }
+
+  .be:after {
+    width: 22px;
+    height: 17px;
+
+    @include sprite(223px, 0);
+  }
+}
+
+#footer-mail {
+  float: right;
+  width: 761px;
+}
+
+#footer-copyrights {
+  height: 122px;
+  margin-top: 104px;
+  line-height: 122px;
+  color: #fff;
+  text-transform: uppercase;
+  margin-left: 35px;
+
+  &, small {
+    font-size: 16px;
+  }
+
+  a {
+    color: #c59a6d;
+  }
+
+  small {
+    float: left;
+  }
+
+  #back-to-top {
+    float: right;
+    cursor: pointer;
+
+    &:after {
+      content: "";
+      display: inline-block;
+      vertical-align: middle;
+
+      width: 18px;
+      height: 11px;
+      margin-left: 13px;
+
+      position: relative;
+      top: -3px;
+
+      @include sprite(154px, 11px);
+    }
+  }
+}

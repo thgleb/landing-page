@@ -1,0 +1,62 @@
+.form {
+  @mixin input-elements() {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+
+    background: #1e2429;
+    color: #d5d6d6;
+
+    outline: none;
+    border: none;
+
+    font: italic 16px/30px $font-family;
+    @include transition(all, .2s);
+
+    &:focus {
+      box-shadow: inset 0 3px rgba(#c59a6d, 0.8);
+    }
+  }
+
+  input:not([type="file"]):not([type="submit"]) {
+    width: 360px;
+    height: 52px;
+    padding: 0 23px;
+
+    @include input-elements();
+  }
+
+  .input-row,
+  .textarea-row {
+    margin-bottom: 48px;
+  }
+
+  .input-row {
+    input:first-child {
+      float: left;
+    }
+
+    input:last-child {
+      float: right;
+    }
+  }
+
+  .textarea-row {
+    textarea {
+      @include input-elements();
+      padding: 10px 22px;
+
+      width: 100%;
+      height: 155px;
+    }
+
+    &.no-resize textarea {
+      resize: none;
+    }
+  }
+
+  .button.btn-input {
+    margin-top: 22px;
+    float: right;
+  }
+}
