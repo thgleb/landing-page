@@ -2,7 +2,7 @@
   background: no-repeat url(../images/sprite.png) -#{$x} -#{$y};
 }
 
-@mixin transition($transition-property, $transition-time, $method) {
+@mixin transition($transition-property, $transition-time, $method: ease-in-out) {
   -webkit-transition: $transition-property $transition-time $method;
   -moz-transition: $transition-property $transition-time $method;
   -ms-transition: $transition-property $transition-time $method;

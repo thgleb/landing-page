@@ -1,0 +1,153 @@
+#about-us {
+  padding-bottom: 93px;
+
+  .heading {
+    padding-top: 82px;
+  }
+
+  .scroll-down {
+    margin-top: 106px;
+  }
+}
+
+#team-list {
+  margin-top: 155px;
+
+  li {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+
+    list-style: none;
+    display: inline-block;
+
+    text-align: center;
+    vertical-align: top;
+
+    width: 291px;
+    height: 388px;
+    margin-right: 34px;
+
+    border: 1px solid #d8d9da;
+
+    opacity: .6;
+    @include transition(opacity, .2s);
+
+    &:hover {
+      opacity: 1;
+    }
+  }
+
+  .hire-block {
+    $color: #c59a6d;
+    $hover-color: #fff;
+
+    margin-right: 0;
+    width: 196px;
+    border-color: $color;
+    opacity: 1;
+
+    &, h3, .plus-sign, .plus-sign:before {
+      @include transition(background, .2s);
+    }
+
+    h3 {
+      color: #c59a6d;
+      width: 110px;
+      padding-top: 113px;
+      margin: 0 auto;
+      line-height: 31px;
+    }
+
+    a {
+      display: block;
+      width: 100%;
+      height: 100%;
+    }
+
+    &:hover {
+      background: $color;
+
+      h3 {
+        color: $hover-color;
+      }
+
+      .plus-sign,
+      .plus-sign:before {
+        background: $hover-color;
+      }
+    }
+  }
+
+  .plus-sign {
+    $width: 44px;
+    $height: 2px;
+    $color: #c59a6d;
+
+    position: relative;
+    margin: 72px auto 0 auto;
+
+    width: $width;
+    height: $height;
+    background: $color;
+
+    &:before {
+      $offset: $width / 2 - $height / 2;
+
+      content: "";
+      display: block;
+
+      width: $height;
+      height: $width;
+      background: $color;
+
+      position: absolute;
+      top: -$offset;
+      left: $offset;
+    }
+  }
+
+  .employee-image {
+    overflow: hidden;
+    width: 104px;
+    height: 104px;
+    border-radius: 50%;
+    margin: 75px auto 0 auto;
+
+    position: relative;
+
+    &:after {
+      content: "";
+      display: block;
+      position: absolute;
+      top: 0;
+      left: 0;
+
+      width: 100%;
+      height: 100%;
+
+      opacity: .45;
+      background: #282f35;
+
+      @include transition(opacity, .2s);
+    }
+  }
+
+  h3 {
+    font-weight: bold;
+    font-size: 20px;
+    color: #282f35;
+    text-transform: uppercase;
+    margin-top: 33px;
+  }
+
+  .post {
+    margin-top: 4px;
+    font-size: 16px;
+    color: #282f35;
+
+    &:after {
+      margin-top: 16px;
+    }
+  }
+}

@@ -43,6 +43,14 @@ body {
   &.small:after {
     width: 32px;
   }
+
+  &.big:after {
+    width: 104px;
+  }
+
+  &.thin:after {
+    border-top-width: 1px;
+  }
 }
 .scroll-down {
   width: 40px;
