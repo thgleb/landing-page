@@ -1,0 +1,101 @@
+#tweets {
+  background: #ddd center center / cover url(../images/tweets-bg.jpg);
+
+  .heading {
+    color: #fff;
+    margin-top: 96px;
+  }
+
+  .inner-container {
+    position: relative;
+    overflow: hidden;
+     height: 501px;
+  }
+}
+
+#tweets-box {
+  position: relative;
+  top: 7px;
+
+  li {
+    list-style: none;
+    display: none;
+    padding: 0 52px;
+
+    font-style: italic;
+
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    &[data-state="on"] {
+      display: block;
+    }
+  }
+
+  p, a {
+    color: #fff;
+  }
+
+  a {
+    text-decoration: underline;
+
+    &:hover {
+      text-decoration: none;
+    }
+  }
+
+  .author {
+    display: block;
+    margin-top: 35px;
+
+    text-align: center;
+    text-transform: uppercase;
+    font-style: normal;
+    font-size: 18px;
+
+    a {
+      text-decoration: none;
+
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+  }
+}
+
+#tweets-nav {
+  position: absolute;
+  bottom: 25px;
+
+  width: 100%;
+  text-align: center;
+
+  li {
+    $color: #c59a6d;
+
+    list-style: none;
+    display: inline-block;
+
+    width: 31px;
+    height: 31px;
+    cursor: pointer;
+
+    span {
+      font-size: 0;
+      display: block;
+      margin: 11px auto;
+
+      width: 8px;
+      height: 8px;
+
+      border: 1px solid $color;
+      @include transition(background, .2s);
+    }
+
+    &[data-state="on"] span,
+    &:hover span {
+      background: $color;
+    }
+  }
+}
