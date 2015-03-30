@@ -1,2 +1,2 @@
-#= require script.coffee
-#= require some-script.coffee
+#= require header-menu.coffee
+#= require scroll-through-page.coffee

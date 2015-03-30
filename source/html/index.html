@@ -13,11 +13,11 @@
 
         <nav> <!-- data-state="on" -->
           <ul>
-            <li><a href="#">Service</a></li>
+            <li><a href="#service">Service</a></li>
             <li><a href="#">Pricing</a></li>
-            <li><a href="#">Projects</a></li>
-            <li><a href="#">About</a></li>
-            <li><a href="#">Contact</a></li>
+            <li><a href="#latest-projects">Projects</a></li>
+            <li><a href="#about-us">About</a></li>
+            <li><a href="#footer">Contact</a></li>
           </ul>
         </nav>
       </div>
@@ -31,7 +31,7 @@
           We make websites
         </div>
 
-        <div class="scroll-down"></div>
+        <div class="scroll-down" data-next="#meet-us"></div>
       </div>
     </div>
   </header>
@@ -41,7 +41,7 @@
 
     <p class="landing-description">At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident.</p>
 
-    <div class="scroll-down dark"></div>
+    <div class="scroll-down dark" data-next="#service"></div>
   </section>
 
   <section id="landing-video" class="video" style="background-image:url(/assets/images/video-poster.jpg)">
@@ -77,7 +77,7 @@
       </ul>
     </div>
 
-    <div class="scroll-down dark"></div>
+    <div class="scroll-down dark" data-next="#latest-projects"></div>
   </section>
 
   <section id="shop">
@@ -134,7 +134,7 @@
       <a href="#">More on Behance</a>
     </div>
 
-    <div class="scroll-down dark"></div>
+    <div class="scroll-down dark" data-next="#about-us"></div>
   </section>
 
   <section id="partners">
@@ -203,7 +203,7 @@
       </ul>
     </div>
 
-    <div class="scroll-down dark"></div>
+    <div class="scroll-down dark" data-next="#tweets"></div>
   </section>
 
   <section id="tweets">
@@ -322,5 +322,7 @@
       </div>
     </div>
   </footer>
+
+  <script src="/assets/js/build.js"></script>
 </body>
 </html>

@@ -2,6 +2,10 @@
   height: 803px;
   background: #ddd center center / cover url(../images/header-bg.jpg);
 
+  .container {
+    position: relative;
+  }
+
   .inner-container {
     text-align: center;
   }
@@ -73,7 +77,7 @@
   }
 }
 #header-nav {
-  position: relative;
+  position: absolute;
   left: 45px;
   top: 58px;
 
