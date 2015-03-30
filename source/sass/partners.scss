@@ -1,0 +1,68 @@
+#partners {
+  background: #ddd center center/cover url(../images/partners-bg.jpg);
+  height: 501px;
+
+  .heading {
+    padding-top: 121px;
+    color: #fff;
+
+    &:after {
+      position: relative;
+      top: 15px;
+    }
+  }
+
+  ul {
+    margin-top: 70px;
+    display: table;
+    width: 100%;
+  }
+
+  li {
+    list-style: none;
+    display: table-cell;
+    vertical-align: middle;
+    text-align: center;
+
+    &:first-child {
+      text-align: left;
+    }
+
+    &:last-child {
+      text-align: right;
+    }
+  }
+
+  a {
+    display: inline-block;
+    vertical-align: middle;
+  }
+
+  span {
+    display: none;
+  }
+
+  .adidas {
+    @include sprite(0, 64px);
+    width: 77px;
+    height: 51px;
+  }
+
+  .google {
+    @include sprite(77px, 64px);
+    width: 109px;
+    height: 38px;
+  }
+
+  .samsung {
+    @include sprite(186px, 64px);
+    width: 84px;
+    height: 30px;
+  }
+
+  .microsoft {
+    @include sprite(270px, 64px);
+    width: 99px;
+    height: 17px;
+  }
+}
