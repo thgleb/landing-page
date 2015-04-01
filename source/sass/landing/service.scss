@@ -61,14 +61,14 @@
     }
 
     &.branding:before {
-      @include sprite(0, 0);
+      @include sprite();
       height: 64px;
       width: 54px;
       left: 154px;
     }
 
     &.web-development:before {
-      @include sprite(54px, 0);
+      @include sprite(54);
       height: 52px;
       width: 64px;
       left: 149px;
@@ -76,7 +76,7 @@
     }
 
     &.app-design:before {
-      @include sprite(118px, 0);
+      @include sprite(118);
       height: 64px;
       width: 36px;
       left: 163px;

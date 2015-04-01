@@ -43,25 +43,25 @@
   }
 
   .adidas {
-    @include sprite(0, 64px);
+    @include sprite(0, 64);
     width: 77px;
     height: 51px;
   }
 
   .google {
-    @include sprite(77px, 64px);
+    @include sprite(77, 64);
     width: 109px;
     height: 38px;
   }
 
   .samsung {
-    @include sprite(186px, 64px);
+    @include sprite(186, 64);
     width: 84px;
     height: 30px;
   }
 
   .microsoft {
-    @include sprite(270px, 64px);
+    @include sprite(270, 64);
     width: 99px;
     height: 17px;
   }

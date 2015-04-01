@@ -34,7 +34,7 @@ $footer-address-width: 370px;
       width: 16px;
       height: 24px;
 
-      @include sprite(154px, 33px);
+      @include sprite(154, 33);
     }
   }
 
@@ -93,28 +93,28 @@ $footer-address-width: 370px;
     width: 10px;
     height: 22px;
 
-    @include sprite(172px, 0);
+    @include sprite(172);
   }
 
   .tw:after {
     width: 21px;
     height: 19px;
 
-    @include sprite(182px, 0);
+    @include sprite(182);
   }
 
   .vi:after {
     width: 20px;
     height: 19px;
 
-    @include sprite(203px, 0);
+    @include sprite(203);
   }
 
   .be:after {
     width: 22px;
     height: 17px;
 
-    @include sprite(223px, 0);
+    @include sprite(223);
   }
 }
 
@@ -159,7 +159,7 @@ $footer-address-width: 370px;
       position: relative;
       top: -3px;
 
-      @include sprite(154px, 11px);
+      @include sprite(154, 11);
     }
   }
 }

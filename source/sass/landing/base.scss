@@ -71,7 +71,7 @@ body {
     left: 11px;
     top: 14.5px;
 
-    @include sprite(154px, 0);
+    @include sprite(154);
   }
 
   &:hover {
@@ -79,11 +79,11 @@ body {
   }
 
   &.dark:after {
-    @include sprite(154px, 22px)
+    @include sprite(154, 22);
   }
 
   &.dark:hover:after {
-    @include sprite(154px, 0)
+    @include sprite(154);
   }
 }
 .landing-description {

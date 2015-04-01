@@ -1,3 +1,11 @@
-@mixin sprite($x, $y) {
-  background: no-repeat url(../images/sprite.png) -#{$x} -#{$y};
+.sprite {
+  background: no-repeat url(../images/sprite.png);
+}
+
+@mixin sprite($x: 0, $y: 0) {
+  @extend .sprite;
+  
+  @if $x != 0 or $y != 0 {
+    background-position: -#{$x}px -#{$y}px;
+  }
 }
