@@ -1,15 +1,14 @@
-@import "mixins.scss";
-@import "base.scss";
-@import "fonts.scss";
-@import "buttons.scss";
-@import "forms.scss";
-@import "header.scss";
-@import "meet-us.scss";
-@import "video.scss";
-@import "service.scss";
-@import "shop.scss";
-@import "projects-list.scss";
-@import "partners.scss";
-@import "about-us.scss";
-@import "tweets.scss";
-@import "footer.scss";
+///////////
+// Mixins
+///////////
+@import "mixins/_.scss";
+
+/////////////////
+// Dependencies
+/////////////////
+@import "dependencies/_.scss";
+
+////////////////////////
+// Landing Page styles
+////////////////////////
+@import "landing/_.scss";
