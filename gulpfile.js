@@ -51,7 +51,7 @@ gulp.task("styles", function() {
 gulp.task("html", function() {
   gulp.src("./source/html/**/*.html")
       .pipe(plumber())
-      .pipe(html())
+      .pipe(html( { quotes: true } ))
       .pipe(gulp.dest("./dist"));
 });
 
