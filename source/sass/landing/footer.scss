@@ -1,12 +1,12 @@
 #footer {
-  background: #282f35;
-  box-shadow: inset 0 -3px #c59a6d;
+  background: $dark-color;
+  box-shadow: inset 0 -3px $light-color;
 
   .heading {
     display: inline-block;
     padding-top: 64px;
     width: 100%;
-    color: #fff;
+    color: $white-color;
   }
 }
 
@@ -21,7 +21,7 @@ $footer-address-width: 370px;
   float: left;
 
   h3 {
-    color: #fff;
+    color: $white-color;
     text-transform: uppercase;
     font-size: 18px;
 
@@ -43,10 +43,10 @@ $footer-address-width: 370px;
     font-size: 18px;
     line-height: 18px;
     margin: 34px 0 0 34px;
-    color: #fff;
+    color: $white-color;
 
     a {
-      color: #fff;
+      color: $white-color;
     }
   }
 
@@ -127,7 +127,7 @@ $footer-address-width: 370px;
   height: 122px;
   margin-top: 104px;
   line-height: 122px;
-  color: #fff;
+  color: $white-color;
   text-transform: uppercase;
   margin-left: 35px;
 
@@ -136,7 +136,7 @@ $footer-address-width: 370px;
   }
 
   a {
-    color: #c59a6d;
+    color: $light-color;
   }
 
   small {

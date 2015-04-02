@@ -25,7 +25,7 @@
   height: 360px;
 
   text-align: center;
-  background: #282f35;
+  background: $dark-color;
 
   li {
     list-style: none;
@@ -34,7 +34,7 @@
   }
 
   a {
-    background: #ddd;
+    background: $cover-color;
     display: block;
     width: 360px;
     height: 360px;
@@ -59,7 +59,7 @@
 
     &:hover {
       &:after {
-        background: rgba(40,47,53, .7);
+        background: rgba($dark-color, .7);
       }
 
       .type, h3 {
@@ -80,18 +80,18 @@
       text-transform: uppercase;
       font-weight: bold;
       font-size: 18px;
-      color: #fff;
+      color: $white-color;
     }
 
     h3 {
-      color: #c59a6d;
+      color: $light-color;
       font-size: 28px;
       font-weight: normal;
       line-height: 28px;
 
       &.line:after {
         margin-top: 23px;
-        border-color: #fff;
+        border-color: $white-color;
       }
     }
   }

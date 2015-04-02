@@ -45,11 +45,11 @@
 
     &:nth-child(2) {
       padding: 230px $lr-paddigs 115px $lr-paddigs;
-      border: 2px solid #c59a6d;
+      border: 2px solid $light-color;
       border-radius: 2px;
 
       h3 {
-        color: #c59a6d;
+        color: $light-color;
       }
     }
 

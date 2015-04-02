@@ -39,8 +39,8 @@
   }
 
   .hire-block {
-    $color: #c59a6d;
-    $hover-color: #fff;
+    $color: $light-color;
+    $hover-color: $white-color;
 
     margin-right: 0;
     width: 196px;
@@ -52,7 +52,7 @@
     }
 
     h3 {
-      color: #c59a6d;
+      color: $light-color;
       width: 110px;
       padding-top: 113px;
       margin: 0 auto;
@@ -82,7 +82,7 @@
   .plus-sign {
     $width: 44px;
     $height: 2px;
-    $color: #c59a6d;
+    $color: $light-color;
 
     position: relative;
     margin: 72px auto 0 auto;
@@ -127,7 +127,7 @@
       height: 100%;
 
       opacity: .45;
-      background: #282f35;
+      background: $dark-color;
 
       @include transition(opacity, .2s);
     }
@@ -136,7 +136,7 @@
   h3 {
     font-weight: bold;
     font-size: 20px;
-    color: #282f35;
+    color: $dark-color;
     text-transform: uppercase;
     margin-top: 33px;
   }
@@ -144,7 +144,7 @@
   .post {
     margin-top: 4px;
     font-size: 16px;
-    color: #282f35;
+    color: $dark-color;
 
     &:after {
       margin-top: 16px;

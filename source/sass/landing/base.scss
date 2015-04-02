@@ -24,7 +24,7 @@ body {
   font-size: 30px;
   font-weight: bold;
   text-transform: uppercase;
-  color: #424a51;
+  color: $dark-text-color;
   text-align: center;
   margin-top: 85px;
 
@@ -36,7 +36,7 @@ body {
     content: "";
     display: block;
     width: 60px;
-    border-top: 2px solid #c59a6d;
+    border-top: 2px solid $light-color;
     margin: 46px auto 39px auto;
   }
 
@@ -55,7 +55,7 @@ body {
 .scroll-down {
   width: 40px;
   height: 40px;
-  border: solid 1px #c59a6d;
+  border: solid 1px $light-color;
   margin: 36px auto 0 auto;
   position: relative;
   cursor: pointer;
@@ -75,7 +75,7 @@ body {
   }
 
   &:hover {
-    background: #c59a6d;
+    background: $light-color;
   }
 
   &.dark:after {
@@ -87,7 +87,7 @@ body {
   }
 }
 .landing-description {
-  color: #424a51;
+  color: $dark-text-color;
   text-align: center;
 }
 .clearfix:after {

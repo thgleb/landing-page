@@ -1,8 +1,8 @@
 #tweets {
-  background: #ddd center center / cover url(../images/tweets-bg.jpg);
+  background: $cover-color center center / cover url(../images/tweets-bg.jpg);
 
   .heading {
-    color: #fff;
+    color: $white-color;
     margin-top: 96px;
   }
 
@@ -34,7 +34,7 @@
   }
 
   p, a {
-    color: #fff;
+    color: $white-color;
   }
 
   a {
@@ -72,7 +72,7 @@
   text-align: center;
 
   li {
-    $color: #c59a6d;
+    $color: $light-color;
 
     list-style: none;
     display: inline-block;

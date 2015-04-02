@@ -1,6 +1,6 @@
 #header {
   height: 803px;
-  background: #ddd center center / cover url(../images/header-bg.jpg);
+  background: $cover-color center center / cover url(../images/header-bg.jpg);
 
   .container {
     position: relative;
@@ -15,7 +15,7 @@
   }
 }
 #header-slogan {
-  color: #fff;
+  color: $white-color;
   font-size: 16px;
   text-transform: uppercase;
   padding-top: 243px;
@@ -31,16 +31,16 @@
   font-size: 2.72 * $font-size;
   font-weight: bold;
   line-height: 123px;
-  border: 2px solid #fff;
+  border: 2px solid $white-color;
   border-radius: 2px;
-  color: #fff;
+  color: $white-color;
 }
 #header-nav-switcher {
   $width: 30px;
   $height: 4px;
   $margin: 6px;
-  $color: #fff;
-  $hover-color: #e7e7e7;
+  $color: $white-color;
+  $hover-color: $cover-color;
 
   @mixin switcher() {
     width: $width;
@@ -100,7 +100,7 @@
     display: inline-block;
     padding: 10px 20px;
     font-size: 0.63 * $font-size;
-    color: #fff;
+    color: $white-color;
     text-transform: uppercase;
 
     &:hover {
