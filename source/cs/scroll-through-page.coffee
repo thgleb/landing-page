@@ -1,16 +1,17 @@
+# Scroll-Down Links
 scrollElements = document.querySelectorAll ".scroll-down"
 
-for element in scrollElements
-  ((el) ->
+for el in scrollElements
+  do (el) ->
     el.addEventListener "click", ->
       nextSectionId = el.getAttribute "data-next"
       nextSection = document.querySelector nextSectionId
 
       if nextSection
-        window.scrollTo 0, nextSection.offsetTop
-  )(element)
+        scrollTo document.body, nextSection.offsetTop, 300
 
+# Footer's Button
 toTopButton = document.querySelector "#back-to-top"
 
 toTopButton.addEventListener "click", ->
-  window.scrollTo(0, 0)
+  scrollTo document.body, 0, 300
