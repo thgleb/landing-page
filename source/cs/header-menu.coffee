@@ -19,4 +19,4 @@ for element in navElements
 
       if section
         do event.preventDefault
-        scrollTo document.body, section.offsetTop, 300
+        App.Utils.scrollTo document.body, section.offsetTop, 300

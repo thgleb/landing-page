@@ -8,10 +8,10 @@ for el in scrollElements
       nextSection = document.querySelector nextSectionId
 
       if nextSection
-        scrollTo document.body, nextSection.offsetTop, 300
+        App.Utils.scrollTo document.body, nextSection.offsetTop, 300
 
 # Footer's Button
 toTopButton = document.querySelector "#back-to-top"
 
 toTopButton.addEventListener "click", ->
-  scrollTo document.body, 0, 300
+  App.Utils.scrollTo document.body, 0, 300

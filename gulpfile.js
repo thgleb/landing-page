@@ -1,3 +1,4 @@
+var fs = require("fs");
 var gulp = require("gulp");
 var plumber = require("gulp-plumber");
 var coffee = require("gulp-coffee");
@@ -28,13 +29,25 @@ function arg(key) {
 };
 
 gulp.task("scripts", function() {
-  gulp.src("./source/cs/build.coffee")
-      .pipe(plumber())
-      .pipe(include())
-      .pipe(coffee())
-      .pipe(concat("build.js"))
-      .pipe(uglify())
-      .pipe(gulp.dest("./dist/assets/js"));
+  var folder = "./source/cs/";
+
+  fs.readFile(folder + "build.scheme", function(err, data) {
+    if (err) {
+      throw err;
+    };
+
+    var files = String(data).split("\n").map(function(file) {
+      return folder + file.trim();
+    });
+
+    gulp.src(files)
+        .pipe(plumber())
+        .pipe(include())
+        .pipe(coffee())
+        .pipe(concat("build.js"))
+        .pipe(uglify())
+        .pipe(gulp.dest("./dist/assets/js"));
+  });
 });
 
 gulp.task("styles", function() {
