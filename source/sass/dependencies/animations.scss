@@ -1,0 +1,17 @@
+@include keyframes(hide) {
+  from { opacity: 1; }
+  to { opacity: 0; }
+}
+
+@include keyframes(show) {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+.hide {
+  @include animation(hide .3s);
+}
+
+.show {
+  @include animation(show .3s);
+}
