@@ -14,9 +14,7 @@
   margin-top: 155px;
 
   li {
-    -webkit-box-sizing: border-box;
-    -moz-box-sizing: border-box;
-    box-sizing: border-box;
+    @include box-sizing("border-box");
 
     list-style: none;
     display: inline-block;

@@ -1,0 +1,19 @@
+.bs-border-box {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+@mixin box-sizing($argument) {
+  @if $argument == "border-box" {
+
+    @extend .bs-border-box;
+
+  } @else {
+
+    -webkit-box-sizing: $argument;
+    -moz-box-sizing: $argument;
+    box-sizing: $argument;
+
+  }
+}

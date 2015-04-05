@@ -30,9 +30,7 @@
     color: #8e9297;
     text-align: center;
 
-    -webkit-box-sizing: border-box;
-    -moz-box-sizing: border-box;
-    box-sizing: border-box;
+    @include box-sizing("border-box");
 
     &:last-child {
       margin-right: 0;
